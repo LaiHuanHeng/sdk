@@ -29,7 +29,7 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                from(components["release"]) // 这里的 release 是 buildType
+//                from(components["release"]) // 这里的 release 是 buildType
                 groupId = "com.github.LaiHuanHeng"
                 artifactId = "sdk"
                 version = "BleMeshApiV1.0.0"
