@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library )
     alias(libs.plugins.mavenpublish )
     alias(libs.plugins.kotlin.android )
+    alias(libs.plugins.hilt.android) apply false
 }
 
 android {
@@ -24,7 +25,26 @@ android {
     }
 
 }
+dependencies {
 
+    implementation(libs.log)
+    implementation(libs.scanner)
+// Android BLE Library
+    implementation(libs.ble)
+    implementation(libs.hilt.android)
+    // Spongycastle - Android implementation of Bouncy Castle
+    implementation (libs.core)
+    implementation (libs.prov)
+    implementation (libs.gson)
+
+    // Room - Lets keep this as it is so that we don't have to increase the minSdk version
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+    androidTestImplementation(libs.room.testing)
+
+    annotationProcessor(libs.hilt.android.compiler)
+    annotationProcessor(libs.hilt.compiler)
+}
 afterEvaluate {
     publishing {
         publications {
