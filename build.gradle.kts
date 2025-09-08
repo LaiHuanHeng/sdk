@@ -54,7 +54,7 @@ afterEvaluate {
                 artifactId = "sdk"
                 version = "BleMeshApiV0.0.3"
                 // 指向你本地的 AAR 文件
-                artifact("$projectDir/libs/MeshApi-0.0.4-release.aar") {
+                artifact("$projectDir/libs/MeshApi-0.0.5-release.aar") {
                     extension = "aar"
                 }
             }
