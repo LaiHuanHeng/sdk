@@ -52,9 +52,9 @@ afterEvaluate {
 //                from(components["release"]) // 这里的 release 是 buildType
                 groupId = "com.github.LaiHuanHeng"
                 artifactId = "sdk"
-                version = "BleMeshApiV0.0.3"
+                version = "BleMeshApiV0.0.5"
                 // 指向你本地的 AAR 文件
-                artifact("$projectDir/libs/MeshApi-0.0.5-release.aar") {
+                artifact("$projectDir/libs/MeshApi-0.0.6-release.aar") {
                     extension = "aar"
                 }
             }
